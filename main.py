@@ -25,8 +25,8 @@ def download_file():
             os.chdir(PATH)
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([URL])
-            noty='Video Downloaded successfully'
-            Notification.configure(text=noty,fg='black', bg="light steel blue", width=30, font=('times', 18, 'bold','italic'))                
+            noty='Video Downloaded Successfully'
+            Notification.configure(text=noty,fg='black', bg="light steel blue", width=30, font=('times', 18, 'bold','italic'))
             Notification.place(x=150, y=450)
         elif options.get() == "Audio (mp3)":
             # Audio Download
@@ -41,7 +41,7 @@ def download_file():
             os.chdir(PATH)
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([URL])
-            noty='Audio Downloaded successfully'                
+            noty='Audio Downloaded Successfully'
             Notification.configure(text=noty,fg='black', bg="light steel blue", width=30, font=('times', 18, 'bold','italic'))
             Notification.place(x=150, y=450)
     except Exception as e:
@@ -57,10 +57,10 @@ window.configure(background='lightblue')
 
 folder_path = StringVar()
 
-message = tk.Label(window,  text = "Youtube Video downloader", bg="lime green",
+message = tk.Label(window,  text = "Youtube Video Downloader", bg="orange",
             fg="red", height=2, width=int(window.winfo_screenwidth()/2), font=('times', 30, 'italic bold ')).pack()
 
-Notification = tk.Label(window, text="Video Downloaded Successfully", bg="lime green", fg="white", width=int(window.winfo_screenwidth()/2),
+Notification = tk.Label(window, text="Video Downloaded Successfully", bg="orange", fg="white", width=int(window.winfo_screenwidth()/2),
                    height=2, font=('times', 18, 'bold'))
 
 # URL Message
@@ -84,7 +84,7 @@ options.set("Video (mp4)") # default value
 
 om1 =tk.OptionMenu(window, options, "Video (mp4)","Audio (mp3)")
 om1["bg"] = "gray"
-om1["highlightthickness"]=0 
+om1["highlightthickness"]=0
 om1.config(width=10, height=1, font=('times', 15, ' bold '))
 om1['menu'].config(font=('times',(15)),bg='gray')
 om1.place(x=600, y=160)
@@ -102,7 +102,7 @@ down.place(x=390, y=350)
 
 
 
-message = tk.Label(window,  text = "", bg="lime green",
+message = tk.Label(window,  text = "", bg="orange",
             fg="black", height=1, width=int(window.winfo_screenwidth()/2), font=('times', 30, 'italic bold ')).pack(side = BOTTOM)
 
 
